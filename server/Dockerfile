@@ -3,11 +3,11 @@ FROM node:alpine
 ENV CI=true
 ENV WDS_SOCKET_PORT=0
 WORKDIR /app
-COPY ./server/package.json ./server/package-lock.json ./
+COPY ./package.json ./package-lock.json ./
 RUN npm ci
 
 # copy everything to app folder
-COPY ./server .
+COPY ./ .
 
 # set up command to run with the image or container first starts up
 CMD ["npm", "run", "start"]
