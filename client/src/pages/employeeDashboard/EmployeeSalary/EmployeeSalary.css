@@ -1,0 +1,128 @@
+.salary-container {
+    font-family: Arial, sans-serif;
+    margin-left: 80px;
+    background-color: #f9f9f9;
+    flex :1;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .salary-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .salary-report,
+  .year-to-date {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .salary-report h3,
+  .year-to-date h3 {
+    color: #4caf50;
+  }
+  
+  .months {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+  
+  .month-btn {
+    margin: 5px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .month-btn:hover {
+    background-color: #00acc1;
+    color: #fff;
+  }
+  
+  .year-to-date {
+    text-align: center;
+  }
+  
+  .total-gross {
+    margin-top: 20px;
+    align-self: right;
+  }
+  
+  .summary {
+    margin-bottom: 20px;
+  }
+  
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .summary-table th,
+  .summary-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .summary-table th {
+    background-color: #f1f1f1;
+  }
+  
+  .status-paid {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .additional-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .direct-deposit,
+  .paid-time-off {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .view-btn {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .view-btn:hover {
+    background-color: #0b79d0;
+  }
+
+  .paycard{
+    display: flex;
+   flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  

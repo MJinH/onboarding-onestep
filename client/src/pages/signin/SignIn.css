@@ -1,0 +1,39 @@
+/* Forgot Password Styles */
+
+/* Style for form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  /* Submit button style */
+  .submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Forgot password link style */
+  .forgot-password-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  
+  /* Circular progress spinner style */
+  .MuiCircularProgress-root {
+    color: white;
+  }
+  

@@ -1,0 +1,47 @@
+/* Navbar */
+.Navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.nav-left .logo {
+  height: 50px;
+}
+
+.nav-right .nav-link {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-right .nav-link:hover {
+  color: #00aaff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    max-width: 90%;
+  }
+
+  .heroSection h1 {
+    font-size: 3rem;
+  }
+
+  .heroSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 12px 20px;
+  }
+}
