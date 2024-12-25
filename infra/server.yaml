@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  # template section describes exactly how every pod that is created and managed by this deployment should behave
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+        - name: server
+          image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/onestep-server:v32
+          ports:
+            - containerPort: 3001
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-srv
+spec:
+  selector:
+    app: server
+  ports:
+    # 이걸 logging purpose 별로안중요
+    - name: server
+      protocol: TCP
+      port: 3001
+      targetPort: 3001
