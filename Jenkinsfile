@@ -71,12 +71,14 @@ pipeline {
                                     serverUrl: "${EKS_API}",
                                     clusterName: "${EKS_CLUSTER_NAME}"]) {
                         // Deploy Client
-                        sh "sed 's/IMAGE_VERSION/${env.BUILD_NUMBER}/g' ./infra/client.yaml > client-output.yaml"
+                        sh "sed 's/IMAGE_VERSION/v${env.BUILD_ID}/g' ./infra/client.yaml > client-output.yaml"
+                        sh "aws eks --region ${REGION} update-kubeconfig --name ${EKS_CLUSTER_NAME}"
                         sh "kubectl apply -f client-output.yaml"
                         sh "rm client-output.yaml"
 
                         // Deploy Server
-                        sh "sed 's/IMAGE_VERSION/${env.BUILD_NUMBER}/g' ./infra/server.yaml > server-output.yaml"
+                        sh "sed 's/IMAGE_VERSION/v${env.BUILD_ID}/g' ./infra/server.yaml > server-output.yaml"
+                        sh "aws eks --region ${REGION} update-kubeconfig --name ${EKS_CLUSTER_NAME}"
                         sh "kubectl apply -f server-output.yaml"
                         sh "rm server-output.yaml"
                     }
