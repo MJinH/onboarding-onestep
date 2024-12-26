@@ -72,12 +72,12 @@ pipeline {
                                     clusterName: "${EKS_CLUSTER_NAME}"]) {
                         // Deploy Client
                         sh "sed 's/IMAGE_VERSION/${env.BUILD_NUMBER}/g' ./infra/client.yaml > client-output.yaml"
-                        sh "kubectl apply -f client-output.yaml"
+                        sh "kubectl apply --validate=false -f client-output.yaml"
                         sh "rm client-output.yaml"
 
                         // Deploy Server
                         sh "sed 's/IMAGE_VERSION/${env.BUILD_NUMBER}/g' ./infra/server.yaml > server-output.yaml"
-                        sh "kubectl apply -f server-output.yaml"
+                        sh "kubectl apply --validate=false -f server-output.yaml"
                         sh "rm server-output.yaml"
                     }
                 }
