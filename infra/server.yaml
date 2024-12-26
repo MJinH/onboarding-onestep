@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/server:v32
+          image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/server:v35
           ports:
             - containerPort: 3001
           resources:
