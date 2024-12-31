@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     environment {
-        REGION = 'us-west-1'
-        EKS_API = 'https://41C10C029BC55F048D25A68B14D7BE91.sk1.us-west-1.eks.amazonaws.com'
-        EKS_CLUSTER_NAME = 'my-cluster'
-        EKS_JENKINS_CREDENTIAL_ID = 'fb6bd7de-6265-4c63-857f-412e161012db'
-        ECR_PATH = '913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr'
-        AWS_CREDENTIAL_ID = 'd9feac58-0552-456d-ae63-f8948a09d20c'
+        REGION = PROCESS.ENV.REGION
+        EKS_API = PROCESS.ENV.EKS_API
+        EKS_CLUSTER_NAME = PROCESS.ENV.CLUSTER_NAME
+        EKS_JENKINS_CREDENTIAL_ID = PROCESS.ENV.JENKINS_CREDENTIAL
+        ECR_PATH = PROCESS.ENV.ECR_PATH
+        AWS_CREDENTIAL_ID = PROCESS.ENV.AWS_CREDENTIAL
     }
     
     stages {
